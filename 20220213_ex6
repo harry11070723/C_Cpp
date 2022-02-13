@@ -1,0 +1,24 @@
+// 20220213_ex6.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iA = 0, iB = 0, iC = 0, iD = 0;
+	//UI  ax^2 + bx + c = 0	
+	cout << "Please key in a = " << endl;
+	cin  >> iA;
+	cout << "Please key in b = " << endl;
+	cin  >> iB;
+	cout << "Please key in c = " << endl;
+	cin  >> iC;
+	//運算
+	iD = iB * iB - 4 * iA * iC;
+	//比較運算輸出
+	cout << (iD > 0?"有相異實根":iD == 0?"有相同實根":"無實數解") << endl;
+
+	system("pause");
+		return 0;
+}
