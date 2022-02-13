@@ -1,0 +1,22 @@
+// 20220213_ex7.cpp: 主要專案檔。
+/*請撰寫一個程式
+讓使用者輸入分數 (0~100)
+90~100 : A
+80~89  : B
+70~79  : C
+60~69  : D
+0~59   : E
+*/
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+    int iScore;
+	cout << "Please key in your score : " << endl;
+	cin >> iScore;
+	cout << "Your score is " <<iScore << " => " <<(iScore >=90?"A":iScore >=80?"B" : iScore >=70?"C" : iScore >=60?"D":"E") << endl;
+	system("pause");
+    return 0;
+}
