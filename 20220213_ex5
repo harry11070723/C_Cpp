@@ -1,0 +1,34 @@
+// 20220213_ex5.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+    int iA = 10, iB = 3;
+	//cout << "a > b : " << iA > iB << endl; 錯誤 因為 <<運算子之順序 高於 >運算子
+/*	cout << "a > b : " << (iA > iB) << endl;
+	cout << "a < b : " << (iA < iB) << endl;
+	cout << "a >= b : " << (iA >= iB) << endl;
+	cout << "a <= b : " << (iA <= iB) << endl;
+	cout << "a == b : " << (iA == iB) << endl;
+	cout << "a != b : " << (iA != iB) << endl;	
+*/	
+	
+	
+	
+	cout << "a > b : " << (iA > iB?"成立":"不成立") << endl;
+	cout << "a < b : " << (iA < iB?"成立":"不成立") << endl;
+	cout << "a >= b : " << (iA >= iB?"成立":"不成立") << endl;
+	cout << "a <= b : " << (iA <= iB?"成立":"不成立") << endl;
+	cout << "a == b : " << (iA == iB?"成立":"不成立") << endl;
+	cout << "a != b : " << (iA != iB?"成立":"不成立") << endl;
+	//三元運算子
+	cout << "Score = ";
+	cin >> iB;
+	cout <<(iB >= 60?"及格":"不及格") << endl;
+
+	system("pause");
+    return 0;
+}
