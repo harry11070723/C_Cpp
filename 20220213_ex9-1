@@ -1,0 +1,29 @@
+// 20220213_ex9.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+#include <ctime>
+#define N 10
+
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+    srand(unsigned(time(NULL))); 
+	int iAnswer, iUserInput;
+	
+	//產生答案
+	iAnswer = rand() % N +1; //0~32767 -> 0~10
+	
+	//UI
+	cout << "Guess (1 ~ " << N << " ): ";
+	cin >> iUserInput;
+
+	//運算
+	if(iUserInput == iAnswer)
+		cout << "猜對了!" << endl;
+	else
+		cout << "猜錯了!答案是 : "<< iAnswer << endl;
+	system("pause");
+    return 0;
+}
