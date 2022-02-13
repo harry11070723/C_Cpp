@@ -1,0 +1,18 @@
+// 20220213_ex2.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+    int a = 10, b = 3, c = 1; //init.初始值宣告設定
+	cout << "a + b = " << a + b << endl; //end of line ->換行
+	cout << "a - b = " << a - b << endl;
+	cout << "a * b = " << a * b << endl;
+	cout << "a / b = " << a / b << endl; // C/C++內整數與整數的運算仍為整數(非浮點數)
+	cout << "a % b = " << a % b << endl;
+	system("pause");
+    return 0;
+}
