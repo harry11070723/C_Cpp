@@ -1,0 +1,33 @@
+// 20220213_ex11.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iUserInput;
+	//UI
+	cout << "請輸入月份 : ";
+	cin >> iUserInput;
+	//運算
+	switch(iUserInput){
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			cout << "有31天" << endl;
+			break;
+		case 2:
+			cout << "有28天" << endl;
+			break;
+		default :
+			cout << "有30天" << endl;
+			break;
+	}
+    system("pause");
+    return 0;
+}
