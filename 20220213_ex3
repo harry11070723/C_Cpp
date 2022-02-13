@@ -1,0 +1,24 @@
+// 20220213_ex3.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+    int iCdegree, iFdegree; //變數命名方式使用匈牙利命名法
+	
+	//UI : user interface
+	cout << "C = ";
+	cin >> iCdegree;
+	
+	//運算
+	iFdegree = 9/5 * iCdegree + 32;
+	
+	//輸出
+	cout << "F = " << iFdegree<< endl;
+	system("pause");
+
+
+    return 0;
+}
