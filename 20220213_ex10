@@ -1,0 +1,36 @@
+// 20220213_ex10.cpp: 主要專案檔。
+//使用switch case方式分級距
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iScore;
+	//UI
+	cout << "Score = ";
+	cin >> iScore;
+	//運算
+	switch(iScore/10){
+		case 10:
+			cout << "A" <<endl;
+			break;
+		case 9:
+			cout << "A" <<endl;
+			break;		
+		case 8:
+			cout << "B" <<endl;
+			break;
+		case 7:
+			cout << "C" <<endl;
+			break;
+		case 6:
+			cout << "D" <<endl;
+			break;
+		default:
+			cout << "E" <<endl;
+			break;
+	}
+	system("pause");
+    return 0;
+}
