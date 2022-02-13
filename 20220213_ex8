@@ -1,0 +1,22 @@
+// 20220213_ex8.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+    //讓使用者輸入三角形三邊長度，判斷是否可以形成三角形
+	//條件 : 任意兩邊和>第三邊
+	int iA, iB, iC;
+	cout << "長度 a = "<< endl;
+	cin >> iA;
+	cout << "長度 b = "<< endl;
+	cin >> iB;
+	cout << "長度 c = "<< endl;
+	cin >> iC;
+
+	cout << ((iA+iB > iC && iB + iC > iA && iC + iA > iB)?"結果: 是一個三角形":"結果: 不是一個三角形") << endl;
+	system("pause");
+    return 0;
+}
