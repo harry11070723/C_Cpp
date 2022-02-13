@@ -1,0 +1,24 @@
+// 20220213_ex1.cpp: 主要專案檔。
+//標頭檔/函式庫
+#include "stdafx.h"
+//iostream -> i :input  o:output
+#include <iostream> //鍵盤輸入 螢幕輸出
+//#include <stdio.h> 舊
+
+//命名空間 : C++ 才有, C 沒有
+//using namespace System;
+using namespace std;
+int main(array<System::String ^> ^args) //程式執行入口
+{
+    //Console::WriteLine(L"Hello World");
+	/* 多行註解
+	std::count << "Please input score : "; //畫面輸出字串
+	std::cin   >> a; //鍵盤輸入整數
+	std::count << a;
+	*/
+	count << "Please input score : "; //畫面輸出字串
+	cin   >> a; //鍵盤輸入整數
+	count << a;
+	system("pause");
+	return 0;
+}
