@@ -10,7 +10,7 @@
 using namespace std;
 int main(array<System::String ^> ^args) //程式執行入口
 {
-    //Console::WriteLine(L"Hello World");
+        // 單行註解 Console::WriteLine(L"Hello World");
 	/* 多行註解
 	std::count << "Please input score : "; //畫面輸出字串
 	std::cin   >> a; //鍵盤輸入整數
