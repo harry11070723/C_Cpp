@@ -1,0 +1,21 @@
+// 20220220_ex1.cpp: 主要專案檔。
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iA = 5, iB = 3, iC = 0;
+	const int iD = 10;
+	cout << sizeof(iA) << endl; //使用sizeof查詢占用的記憶體空間
+	cout << sizeof(iD) << endl;
+	//顯性型別轉換
+	cout << sizeof(static_cast<double>(iA)) << endl;
+	//隱性型別轉換
+	cout << sizeof(1.0 + iA) << endl;  // 1.0 double -> 8 bytes
+	cout << sizeof(1.0f + iA) << endl; // 1.0f float -> 4 bytes
+
+	system("pause");	
+	return 0;
+}
