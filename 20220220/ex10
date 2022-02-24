@@ -1,0 +1,35 @@
+//20220220_ex10.cpp: 主要專案檔。
+#include "stdafx.h"
+#include <iostream>
+#define STU_NUM 5
+using namespace std;
+//建立一個SCORE的結構，內有4個欄位(fields)
+struct SCORE{
+	int iChiScore;
+	int iEngScore;
+	int iMathScore;
+	float fAvgScore;
+};
+int main(array<System::String ^> ^args)
+{
+    SCORE myScore[STU_NUM];//建立長度為STU_NUM的結構陣列
+	//存
+	for(int i = 0;i<STU_NUM;++i){
+		cout << "座號 " << i+1 << " : \n";
+		cout << "\t國文 = ";
+		cin >> myScore[i].iChiScore;
+		cout << "\t英文 = ";
+		cin >> myScore[i].iEngScore;
+		cout << "\t數學 = ";
+		cin >> myScore[i].iMathScore;
+		myScore[i].fAvgScore = (myScore[i].iChiScore + myScore[i].iEngScore + myScore[i].iMathScore) / float(3);
+	}
+	//取
+	cout << "座號\t" << "國文\t" << "英文\t" << "數學\t" << "平均\n";
+	for(int i = 0; i<STU_NUM; ++i){
+		cout << i+1 << '\t' << myScore[i].iChiScore << '\t' << myScore[i].iEngScore << '\t' <<
+			myScore[i].iMathScore << '\t' << myScore[i].fAvgScore << endl;
+	}
+	system("pause");
+    return 0;
+}
