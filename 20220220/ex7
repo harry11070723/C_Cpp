@@ -1,0 +1,32 @@
+// 20220220_ex5.cpp: 主要專案檔。
+#include "stdafx.h"
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iAnswer, iUserInput;		
+	cout << "請猜數字(1~100)，共有5次機會" << endl;
+	srand(unsigned(time(NULL)));
+	iAnswer = rand() % 100 +1;
+	//猜數字UI，由於有指定次數因此使用for迴圈
+	for(int i=1; i<=5; ++i){
+		cout << "請猜第" << i << "次: ";
+		cin >> iUserInput;
+	//搭配選擇結構來確認輸入是否是和答案相同
+		if(iUserInput == iAnswer){
+			cout << "恭喜，答對了!" << endl;
+			break;  //強制跳離迴圈
+		}else{
+			cout << "答錯了!" << endl; //若答錯可以搭配選擇結構，給提示
+			if(iUserInput > iAnswer){
+				cout << "比" << iUserInput << "小" << endl;
+			}else{
+				cout << "比" << iUserInput << "大" << endl;
+			}
+		}
+	}
+	system("pause");
+    return 0;
+}
