@@ -1,0 +1,33 @@
+// 20220220_ex9.cpp: 主要專案檔。
+#include "stdafx.h"
+#include <iostream>
+#define STU_NUM 5
+using namespace std;
+int main(array<System::String ^> ^args)
+{
+    int iChiScore[STU_NUM], iEngScore[STU_NUM], iMathScore[STU_NUM];
+	float fAvgScore[STU_NUM] = {0};//設定初始值
+	//存
+	for(int i = 0; i<STU_NUM; ++i){
+		cout << "座號 " << i+1 << " : \n";
+		cout << "\t國文 = ";
+		cin >> iChiScore[i];
+		//           凡是有運用到複合運算子 ex: += 記得要設定初始值
+		fAvgScore[i] += static_cast<float>(iChiScore[i]);
+		cout << "\t英文 = ";
+		cin >> iEngScore[i];
+		fAvgScore[i] += static_cast<float>(iEngScore[i]);
+		cout << "\t數學 = ";
+		cin >> iMathScore[i];
+		fAvgScore[i] += static_cast<float>(iMathScore[i]);
+		fAvgScore[i] /= 3;
+	}
+	//取
+	cout << "座號\t" << "國文\t" << "英文\t" << "數學\t" << "平均\n";
+	for(int i = 0; i<STU_NUM; ++i){
+		cout << i+1 << '\t' << iChiScore[i] << '\t' << iEngScore[i] << '\t' <<
+			iMathScore[i] << '\t' << fAvgScore[i] << endl;
+	}
+	system("pause");
+    return 0;
+}
