@@ -1,0 +1,34 @@
+// 20220220_ex2.cpp: 主要專案檔。
+#include "stdafx.h"
+#include <iostream>
+#define N 5
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	cout << 1 << endl;
+	cout << 2 << endl;
+	cout << 3 << endl;
+	cout << 4 << endl;
+	cout << 5 << endl;
+	//重複結構
+	//for(重複的條件){重複的內容}
+	//重複的條件分 三個部分並使用;隔開
+	//(1)設定初始值
+	//(2)設定終止條件
+	//(3)設定重複遞增/遞減
+	//將要重複的事情寫在block中
+
+	/*最初的迴圈方式	
+	for(int i = 1; i <= 5 ; ++i){
+		cout << i << endl;
+	}
+	*/
+	//將迴圈參數化使用#define N
+	for(int i = 1; i <= N ; ++i){
+		cout << i << endl;
+	} //注意此區塊的i已經被release掉
+	//cout << i << endl; //會出現未宣告識別項的error
+	system("pause");
+    return 0;
+}
