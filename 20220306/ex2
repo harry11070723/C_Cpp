@@ -1,0 +1,24 @@
+// 20220306_ex2.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iAry[10] = {0};
+	int *p = &iAry[0];
+	//存
+	for(int i = 0; i < 10; i++){
+		//iAry[i] = i;
+		*(p+i) = i; //陣列指標的特性,+1代表指標往後移一個
+	}
+	//取
+	for(int i = 0; i < 10; i++){
+		//cout << iAry[i] << '\0';
+		cout << *(p+i) << '\0';
+	}
+
+	system("pause");
+    return 0;
+}
