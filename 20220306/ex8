@@ -1,0 +1,21 @@
+// 20220306_ex8.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+void getSwap(int a, int b){
+	cout << "交換前: a = " << a << ", b = " << b << endl;
+	int temp = a;
+	a = b;
+	b = temp;
+	cout << "交換後: a = " << a << ", b = " << b << endl;
+}
+
+int main(array<System::String ^> ^args)
+{
+	getSwap(5,8);
+	getSwap(999,666);
+	system("pause");
+  return 0;
+}
