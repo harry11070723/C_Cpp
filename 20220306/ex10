@@ -1,0 +1,31 @@
+// 20220306_ex10.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+#include <ctime>
+#define N 1000
+using namespace std;
+
+struct POINT{
+	double x;
+	double y;
+};
+
+int main(array<System::String ^> ^args)
+{
+	int iSum = 0;
+	POINT p[N];
+	srand(unsigned(time(NULL)));
+	//存
+	for(int i=0; i<N; ++i){
+		p[i].x = rand() %1000 / 1000.0;
+		p[i].y = rand() %1000 / 1000.0;
+	
+	if((p[i].x * p[i].x + p[i].y * p[i].y)<=1)
+		iSum++;
+	}
+	cout << iSum*4 / 1000.0 << endl;
+
+    system("pause");
+    return 0;
+}
