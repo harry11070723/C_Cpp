@@ -1,0 +1,60 @@
+// 20220306_ex9.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+struct FRACTION{
+	int num; //定義 分子
+	int den; //定義 分母
+};
+
+FRACTION getADD(FRACTION a, FRACTION b){
+	FRACTION temp;
+	temp.den = a.den * b.den;
+	temp.num = a.num * b.den + b.num * a.den;
+	return temp;
+}
+
+FRACTION getSUB(FRACTION a, FRACTION b){
+	FRACTION temp;
+	temp.den = a.den * b.den;
+	temp.num = a.num * b.den - b.num * a.den;
+	return temp;
+}
+
+void showFraction(FRACTION a){
+	cout << a.num << '/' << a.den << '\0';
+}
+
+int main(array<System::String ^> ^args)
+{
+	FRACTION a,b,c;
+	a.num = 2;
+	a.den = 3;
+	b.num = 1;
+	b.den = 2;
+	c = getADD(a,b);
+
+	showFraction(a);
+	cout << '+';
+	showFraction(b);
+	cout << '=';
+	showFraction(c);
+
+	cout << endl;
+/***/
+	a.num = 1;
+	a.den = 2;
+	b.num = 3;
+	b.den = 4;
+	c = getSUB(a,b);
+
+	showFraction(a);
+	cout << '-';
+	showFraction(b);
+	cout << '=';
+	showFraction(c);
+
+    system("pause");
+    return 0;
+}
