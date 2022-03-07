@@ -1,0 +1,20 @@
+// 20220306_ex3.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int a = 5, b = 8;
+	cout << a << '\0' << b << endl;
+	//若兩個記憶體要做交換，則要透過第三方ex.temp來做交換，使用三個運算子
+	int temp = a;
+	a = b;
+	b = temp;
+
+	cout << a << '\0' << b << endl;
+	
+	system("pause");
+    return 0;
+}
