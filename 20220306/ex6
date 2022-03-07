@@ -1,0 +1,35 @@
+// 20220306_ex6.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#define STU_NUM 3
+#define COURSE_NUM 3
+
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iScore[STU_NUM][COURSE_NUM]; //此為二維陣列: 有3列, 3行=>使用雙迴圈
+	string sCourseName[COURSE_NUM] = {"國文","英文","數學"};
+	//存
+	for(int i = 0 ; i<STU_NUM ; ++i){
+		cout << "第" << i+1 << "位: \n" ;
+		for(int j = 0 ; j<COURSE_NUM ; ++j){
+			//cout << i << '\0' << j << endl;
+			cout << "\t" << sCourseName[j] << " : ";
+			cin >> iScore[i][j];
+		}
+	}
+	//取
+	for(int i = 0 ; i<STU_NUM ; ++i){
+		cout << i+1 << '\t';
+		for(int j = 0 ; j<COURSE_NUM ; ++j){
+		cout << iScore[i][j] << '\t';
+		}
+		cout << endl;
+	}
+
+	system("pause");
+    return 0;
+}
