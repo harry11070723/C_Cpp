@@ -1,0 +1,34 @@
+// 20220306_ex7-1.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+#define STU_NUM 4
+
+using namespace std;
+struct SCORE{
+	int iChiScore;
+	int iEngScore;
+	int iMathScore;
+};
+
+int main(array<System::String ^> ^args)
+{
+	SCORE myScore[STU_NUM];
+	
+	for(int i = 0; i<STU_NUM ; ++i){
+		cout << "第" << i+1 << "位 : \n";
+		cout << "\t國文 : ";
+		cin >> myScore[i].iChiScore;
+		cout << "\t英文 : ";
+		cin >> myScore[i].iEngScore;
+		cout << "\t數學 : ";
+		cin >> myScore[i].iMathScore;
+	}
+	for(int i = 0; i<STU_NUM ; ++i){
+		cout << i+1 << '\t' << myScore[i].iChiScore << '\t' << myScore[i].iEngScore << '\t' << myScore[i].iMathScore << endl;
+	}
+
+
+	system("pause");
+    return 0;
+}
