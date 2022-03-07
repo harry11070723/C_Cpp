@@ -1,0 +1,18 @@
+// 20220306_ex1.cpp: 主要專案檔。
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main(array<System::String ^> ^args)
+{
+	int iScore = 95;
+	int *p = &iScore;
+	//iScore = iScore + 3;
+	//iScore += 3;
+	(*p) += 3;
+	//cout << iScore << endl;
+	cout << (*p) << endl;
+	system("pause");
+    return 0;
+}
